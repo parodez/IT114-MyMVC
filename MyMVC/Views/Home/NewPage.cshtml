@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <title>Index</title>
+</head>
+<body>
+    <center>
+    <h3> My New Page for MyData </h3>
+
+    <table class="styled-table">
+        <tr class="active-row">
+            <th>Student Id</th>
+            <th>Student Name</th>
+            <th>Student Course</th>
+            <th>Action</th>
+        </tr>
+            @foreach (MyData students in Model)
+            {
+                <tr class="active-row">
+                        <td>@students.Id</td>
+                        <td>@students.Name</td>
+                        <td>@students.Course</td>
+                    <td><button>edit</button></td>
+                </tr>
+            }
+    </table>
+    </center>
+</body>
+</html>
